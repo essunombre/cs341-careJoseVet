@@ -1,2 +1,2 @@
 # cs341-careJoseVet
-CS431 - Final project about Jose Care for Animals.
+CS431 - Final project about Jose Care for Animals. @essunombre ig.
