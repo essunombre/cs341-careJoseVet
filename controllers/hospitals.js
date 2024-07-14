@@ -60,7 +60,7 @@ const createHospital = async (req, res) => {
 };
 
 const updateHospital = async (req, res) => {
-  //#swagger.tags=['Hospital']
+  //#swagger.tags=['Hospitals']
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json("Must use a valid hospitalId to find a Hospital.");
   }

@@ -6,7 +6,9 @@ const vetRouter = require("./vets");
 const loginRouter = require("./login");
 const logoutRouter = require("./logout");
 
+router.use("/", require("./swagger"))
 router.get("/", (req, res) => {
+  //#swagger.tags=['Welcome User']
   res.send("Welcome to the Jose Care Pet API (routes)");
 });
 

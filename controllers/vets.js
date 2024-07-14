@@ -61,7 +61,7 @@ const createVet = async (req, res) => {
 };
 
 const updateVet = async (req, res) => {
-  //#swagger.tags=['Vet']
+  //#swagger.tags=['Vets']
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json("Must use a valid vetId to find an Vet.");
   }
