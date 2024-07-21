@@ -1,13 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const petController = require('../controllers/pets')
+const validation = require('../middleware/validate')
+
 // Get
 router.get("/", petController.getAll);
 router.get("/:id", petController.getById);
 // Create
-router.post("/", petController.createPet);
+router.post("/", validation.savePet, petController.createPet);
 // Update
-router.put("/:id", petController.updatePet);
+router.put("/:id", validation.savePet, petController.updatePet);
 // Delete
 router.delete("/:id", petController.deletePet)
 
