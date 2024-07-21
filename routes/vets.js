@@ -3,14 +3,16 @@ const router = express.Router();
 const vetController = require('../controllers/vets')
 const validation = require('../middleware/validate')
 
+const { isAuthenticated } = require('../middleware/authenticate')
+
 // Get
 router.get("/", vetController.getAll);
-router.get("/:id", vetController.getById);
+router.get("/:id", isAuthenticated, vetController.getById);
 // Create
-router.post("/", validation.saveVet, vetController.createVet);
+router.post("/", isAuthenticated, validation.saveVet, vetController.createVet);
 // Update
-router.put("/:id", validation.saveVet, vetController.updateVet);
+router.put("/:id", isAuthenticated, validation.saveVet, vetController.updateVet);
 // Delete
-router.delete("/:id", vetController.deleteVet)
+router.delete("/:id", isAuthenticated, vetController.deleteVet)
 
 module.exports = router

@@ -1,3 +1,8 @@
+// this is variable when testing in local
+// CALLBACK_URL = http://localhost:3000/github/callback
+// https://cs341-carejosevet.onrender.com/github/callback
+
+
 // to change to local
 // "host": "localhost:3000",
 // "basePath": "/",

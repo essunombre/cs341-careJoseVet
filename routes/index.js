@@ -17,4 +17,8 @@ router.use("/owners", ownerRouter)
 router.use("/pets", petRouter)
 router.use("/vets", vetRouter)
 
+// adding the login route
+router.use('/login', loginRouter);
+router.use('/logout', logoutRouter);
+
 module.exports = router;
