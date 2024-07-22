@@ -114,3 +114,4 @@ process.on("uncaughtException", (err, origin) => {
 // I make it to listen
 app.listen(port);
 console.log("Web server is listening at port: " + port);
+module.exports = app;
