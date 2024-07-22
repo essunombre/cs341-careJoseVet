@@ -195,7 +195,7 @@ describe("API Tests", () => {
 
     it("GET /vets/:id should return Pet data with status 200", async () => {
       const response = await request(app).get("/vets/67890").send();
-      expect(response.status).toBe(500);
+      expect(response.status).toBe(200);
       expect(response.headers["content-type"]).toContain("application/json");
       expect(response.body).toEqual({
         _id: "67890",
